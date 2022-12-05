@@ -3,22 +3,19 @@ body {
   margin: 0;
   min-height: 100vh;
   flex-direction: column;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
-header {
-  background-color: #73aedb;
-  text-align: center;
-  color: #fcf064;
-  font-size: 3em;
-  height: 400px;
+.image-container{
+  display: flex;
+  /* max-height: 250px; */
+  height: 40vh;
 }
 
-footer {
+/* footer {
   background-color: black;
   text-align: center;
   color: lightblue;
-}
+} */
 
 main {
   flex: 1;
@@ -29,9 +26,10 @@ main {
   text-align: center;
 }
 
-header h1 {
+h1 {
   font-size: 1.5em;
   margin-top: 20px;
+  color: #fb913a;
 }
 
 .ending-form {
@@ -39,18 +37,14 @@ header h1 {
   flex-direction: column;
   align-items: center;
 }
-
 .ending-form input {
   margin: 10px;
   font-size: 1em;
 }
-
-.ending-form label {
+.ending-form label{
   font-weight: bold;
 }
-
-.ending-form input,
-label {
+.ending-form input,label {
   height: 40px;
   width: 300px;
 }
@@ -65,16 +59,17 @@ label {
   cursor: pointer;
 }
 
+.btn{
+  font-size: 16px;
+}
+
 .btn-start {
-  background-color: #ffc107;
+  background-color: #fd7e14;
 }
 
-.btn-yes {
-  background-color: #28a745;
-}
+.btn-start:hover{
+  background-color: #fb882a;
 
-.btn-no {
-  background-color: #ff0018;
 }
 
 .btn-add-guess {
@@ -83,6 +78,8 @@ label {
   color: white;
 }
 
-img:hover {
-  transform: rotate(3deg);
+img{
+  max-height: 550px;
+  max-width: 350px;
 }
+

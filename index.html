@@ -4,55 +4,74 @@
 <head>
   <meta charset="utf-8" />
   <title>Guess-Me</title>
+  <link rel="stylesheet" href="lib/bootstrap/bootstrap.css">
   <link rel="stylesheet" href="css/app.css" />
-  <link rel="icon" href="img/layout/logo.png" type="image/icon type\">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-
 </head>
 
 <body>
-  <header>
-    <img src="img/layout/logo.png" />
-    <h1>Guess Who</h1>
-  </header>
 
-  <main>
+  <!-- header -->
+  <div class="container-fluid bg-primary bg-gradient bg-opacity-50 p-5 text-center">
+
+    <div class="image-container container mx-auto">
+      <img src="img/layout/genie.png" class="mx-auto" />
+    </div>
+    <h1 class="display-1">Guess Who</h1>
+  </div>
+
+  <div class="alert-container">
+
+    
+    
+  </div>
+
+
+
+
+
+  <main class="container-fluid p-5">
     <section class="game-start">
       <h2>Think of Someone...</h2>
-      <button class="btn bg-warning text-light btn-start">I'm Ready!</button>
+      <button class="btn btn-start btn-warning">I'm Ready!</button>
     </section>
 
     <section class="quest" style="display: none">
       <h2></h2>
-      <button class="btn bg-success text-light btn-yes">Yes</button>
-      <button class="btn bg-danger text-light btn-no">No</button>
+      <button class="btn btn-yes btn-success">Yes</button>
+      <button class="btn btn-no btn-danger">No</button>
+    </section>
+
+
+    <section class="start-again" style="display: none">
+      <h2></h2>
+      <button class="btn btn-start">Try-Again</button>
     </section>
 
     <section class="new-quest" style="display: none">
       <h2>OK, I gave up...</h2>
 
-      <form class="ending-form">
-        <label class="mt-1" for="newGuess">You thought of: </label>
-        <input class="mt-1" name="newGuess" type="txt" id="newGuess" placeholder="Your Guess" required />
+      <form class=" form-container container-fluid ending-form">
+        <label for="newGuess" class="form-label">You thought of: </label>
+        <input name="newGuess" type="txt" id="newGuess" placeholder="Your Guess" required />
 
-        <label class="mt-1" for="newQuest">Question to differentiate:</label>
-        <input class="mt-1" name="newQuest" type="txt" id="newQuest" placeholder="The answer is YES for yours"
-          required />
+        <label for="newQuest" class="form-label">Question to differentiate:</label>
+        <input name="newQuest" type="txt" id="newQuest" placeholder="The answer is YES for yours" required />
 
-        <button type="submit" class="btn  bg-primary text-light mb-2 btn-add-guess">Make me Smarter!</button>
+        <button type="submit" class="btn btn-add-guess">Make me Smarter!</button>
       </form>
     </section>
   </main>
 
-  
-  <footer class="bg-dark text-light">CoffeRights &copy; 2021</footer>
+  <!-- footer -->
+
+  <footer class="bg-primary bg-opacity-75 bg-gradient text-light text-center">CoffeRights &copy; 2021</footer>
 
 
+  <script src="lib/bootstrap/bootstrap.bundel.js"></script>
   <script src="lib/jquery/jquery.js"></script>
-  <script src="js/storage-services.js"></script>
-  <script src="js/quest-service.js"></script>
-  <script src="js/quest-controller.js"></script>
+  <script src="js/storage.service.js"></script>
+  <script src="js/quest.service.js"></script>
+  <script src="js/quest.controller.js"></script>
 </body>
 
 </html>
